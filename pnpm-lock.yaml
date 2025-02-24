@@ -38,6 +38,9 @@ importers:
       '@toktokhan-dev/chakra':
         specifier: ^0.0.20
         version: 0.0.20(@chakra-ui/system@2.6.2(@emotion/react@11.14.0(@types/react@18.3.18)(react@18.3.1))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@18.3.18)(react@18.3.1))(@types/react@18.3.18)(react@18.3.1))(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)
+      '@toktokhan-dev/node':
+        specifier: ^0.0.10
+        version: 0.0.10
       '@toktokhan-dev/react-universal':
         specifier: ^0.0.11
         version: 0.0.11(react-dom@18.3.1(react@18.3.1))(scheduler@0.23.2)

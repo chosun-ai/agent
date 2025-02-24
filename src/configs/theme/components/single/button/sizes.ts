@@ -27,6 +27,7 @@ export const sizes = {
 
     return {
       p: `${py} ${pr} ${py} ${pl}`,
+      height: '48px',
       borderRadius: '8px',
       ...textStyles['pre-heading-05'],
     }

@@ -31,6 +31,7 @@
     "@tanstack/react-query": "^5.45.1",
     "@tanstack/react-query-devtools": "^5.45.1",
     "@toktokhan-dev/chakra": "^0.0.20",
+    "@toktokhan-dev/node": "^0.0.10",
     "@toktokhan-dev/react-universal": "^0.0.11",
     "@toktokhan-dev/react-web": "^0.0.22",
     "@toktokhan-dev/universal": "^0.0.8",
@@ -86,6 +87,10 @@
     "prettier": "^3.3.2",
     "typescript": "^5.4.5"
   },
-  "engines": { "node": ">= 18.0.0", "npm": ">= 7.10.0", "yarn": ">= 1.22.17" },
+  "engines": {
+    "node": ">= 18.0.0",
+    "npm": ">= 7.10.0",
+    "yarn": ">= 1.22.17"
+  },
   "engineStrict": true
 }
