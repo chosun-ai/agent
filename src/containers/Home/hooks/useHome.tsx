@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import { useForm } from 'react-hook-form'
+
 import { useGetSearchQuery } from '@/apis/search/SearchApi.query'
 
 const useHome = () => {
@@ -11,11 +13,21 @@ const useHome = () => {
       category: selectedCategory,
     },
   })
-  const handleSearch = () => {
-    console.log(query)
+
+  const { handleSubmit, register } = useForm({
+    defaultValues: {
+      query: '',
+    },
+  })
+
+  const onSubmit = (data: any) => {
+    setQuery(data.query)
   }
+
   return {
-    handleSearch,
+    register,
+    handleSubmit,
+    onSubmit,
     CATEGORY_LIST,
     setSelectedCategory,
     selectedCategory,

@@ -8,7 +8,7 @@ export class SearchApi {
     if (axios) this.axios = axios
   }
 
-  get = async (params: any): Promise<any[]> => {
+  get = async (params: any): Promise<{ result: any[] }> => {
     const { data } = await this.axios({
       method: 'GET',
       url: `/api/search`,

@@ -1,7 +1,7 @@
 //@delete:file
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-import SearchAction from '@/action/search'
+import SearchAction from '@/agent/search'
 
 export default async function search(
   req: NextApiRequest,
@@ -15,6 +15,5 @@ export default async function search(
     startDate ? String(startDate) : '',
     endDate ? String(endDate) : '',
   )
-  console.log('result : ', result)
   res.status(200).json({ result })
 }

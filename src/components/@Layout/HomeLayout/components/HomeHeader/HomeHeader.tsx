@@ -29,6 +29,7 @@ const HomeHeader = ({ ...props }: ContainerProps) => {
       w={'100%'}
       alignItems={'center'}
       justifyContent="space-between"
+      bg={'white'}
       {...props}
     >
       <Link variant={'unstyled'} href={ROUTES.MAIN}>
