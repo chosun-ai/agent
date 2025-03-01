@@ -41,7 +41,9 @@ const Card = ({ data }: { data: any }) => {
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4}>{data.content}</AccordionPanel>
+                <AccordionPanel pb={4} whiteSpace={'pre-line'}>
+                  {data.content}
+                </AccordionPanel>
               </AccordionItem>
             </Accordion>
           </Box>
