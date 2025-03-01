@@ -4,13 +4,16 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
+  Badge,
   Box,
   CardBody,
   CardHeader,
   Card as ChakraCard,
+  Flex,
   Heading,
   Stack,
   StackDivider,
+  Text,
 } from '@chakra-ui/react'
 
 const Card = ({ data }: { data: any }) => {
@@ -19,9 +22,15 @@ const Card = ({ data }: { data: any }) => {
       <CardHeader>
         <Heading size="md">{`${data.name} ${data.number}권 | ${data.date}`}</Heading>
       </CardHeader>
-      <CardBody>
+      <CardBody pt={'0px'}>
         <Stack divider={<StackDivider />} spacing="4">
           <Box>
+            <Text textStyle={'pre-body-05'}>카테고리 : {data.category}</Text>
+            <Flex gap={'6px'} my={'10px'}>
+              {data.keywords.map((item: any) => {
+                return <Badge key={item}>{item}</Badge>
+              })}
+            </Flex>
             <Accordion allowToggle>
               <AccordionItem>
                 <h2>
