@@ -31,6 +31,9 @@ const Card = ({ data }: { data: any }) => {
                 return <Badge key={item}>{item}</Badge>
               })}
             </Flex>
+            <Text textStyle={'pre-body-05'} mb={'10px'}>
+              요약 : {data.summary}
+            </Text>
             <Accordion allowToggle>
               <AccordionItem>
                 <h2>
