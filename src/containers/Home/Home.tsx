@@ -61,16 +61,16 @@ function Home() {
         })}
       </SimpleGrid>
       <HStack w={'100%'} as={'form'} onSubmit={handleSubmit(onSubmit)}>
-        <Input w={'100%'} {...register('query')} />
+        <Input w={'100%'} {...register('q')} />
         <Button type={'submit'} isLoading={isLoading}>
           키워드 검색
         </Button>
       </HStack>
       <Text textStyle={'pre-body-03'} textAlign={'left'} w={'100%'}>
-        검색 결과 : {data ? data.result.length : 0}
+        검색 결과 : {data ? data.count : 0}
       </Text>
       <VStack alignItems={'flex-start'} w={'100%'} spacing={'10px'}>
-        {data?.result?.map((item: any) => {
+        {data?.results?.map((item: any) => {
           return <Card key={item.id} data={item} />
         })}
       </VStack>

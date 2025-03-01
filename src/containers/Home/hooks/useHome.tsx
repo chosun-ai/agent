@@ -9,19 +9,19 @@ const useHome = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const { data, isLoading } = useGetSearchQuery({
     variables: {
-      query: query,
-      category: selectedCategory,
+      q: query,
     },
   })
 
   const { handleSubmit, register } = useForm({
     defaultValues: {
-      query: '',
+      q: '',
     },
   })
 
   const onSubmit = (data: any) => {
-    setQuery(data.query)
+    console.log('onSubmit data : ', data)
+    setQuery(data.q)
   }
 
   return {

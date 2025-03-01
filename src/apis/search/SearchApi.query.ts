@@ -18,7 +18,7 @@ export function useGetSearchQuery(
   return useQuery({
     queryKey,
     queryFn: () => searchApi.get(params?.variables),
-    enabled: !!params?.variables?.query,
+    enabled: !!params?.variables?.q,
     ...params?.options,
   })
 }
